@@ -1,73 +1,564 @@
-/* Reset Básico */
+/* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1e1e2f, #24243e);
-    color: #f2f2f2;
-  }
-  
-  header {
-    text-align: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-  }
-  
-  header h1 {
-    font-size: 2em;
-    color: #76e4e4;
-  }
-  
-  nav a {
-    color: #76e4e4;
-    text-decoration: none;
-    padding: 0 15px;
-  }
-  
-  nav a:hover {
-    color: #f4b400;
-    transform: scale(1.05);
-  }
-  
-  .hero {
-    text-align: center;
-    padding: 50px;
-  }
-  
-  .hero h2 {
-    font-size: 2em;
-    color: #76e4e4;
-  }
-  
-  .hero p {
-    font-size: 1.2em;
-    color: #bbb;
-    margin-bottom: 20px;
-  }
-  
-  .button {
-    padding: 10px 20px;
-    background-color: #f4b400;
-    color: #1e1e2f;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-  }
-  
-  .button:hover {
-    background-color: #76e4e4;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+header {
+  background-color: #0073e6;
+  color: #fff;
+  padding: 1em;
+}
+
+header h1 {
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 2em;
+}
+
+footer {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+  color: #333;
+}
+
+.galeria {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.galeria h2 {
+  margin-bottom: 1em;
+  color: #333;
+}
+
+.imagens {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espaço entre as imagens */
+  flex-wrap: wrap;
+}
+
+.imagens img {
+  width: 200px; /* Ajuste a largura conforme necessário */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.imagens img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f9;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #003366;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #005bb5;
+}
+
+main {
+  flex: 1;
+  padding: 2em;
+}
+
+.intro, .galeria, .cta {
+  margin-bottom: 3em;
+  padding: 1.5em;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro h2, .galeria h2, .cta h2 {
+  font-size: 1.8em;
+  color: #003366;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.intro p, .galeria p, .cta p {
+  margin-bottom: 1em;
+  font-size: 1.1em;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.galeria .imagens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 1em;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cta {
+  text-align: center;
+  background-color: #003366;
+  color: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta .button {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.75em 1.5em;
+  background-color: #fff;
+  color: #003366;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta .button:hover {
+  background-color: #005bb5;
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.9em;
+  margin-top: auto;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f4f4f9;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #003366;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #005bb5;
+}
+
+main {
+  flex: 1;
+  padding: 2em;
+}
+
+.contato, .redes-sociais {
+  background-color: #fff;
+  padding: 2em;
+  margin-bottom: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contato h2, .redes-sociais h2 {
+  color: #003366;
+  margin-bottom: 1em;
+}
+
+.contato form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form label {
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+form input, form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  padding: 0.8em 2em;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #005bb5;
+}
+
+.redes-sociais p {
+  margin-bottom: 1em;
+}
+
+.redes-sociais .icones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.redes-sociais .icones a {
+  display: flex;
+  align-items: center;
+  color: #003366;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.redes-sociais .icones a i {
+  margin-right: 0.5em;
+}
+
+.redes-sociais .icones a:hover {
+  color: #005bb5;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.9em;
+}
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Fundo claro */
+  color: #333; /* Cor do texto */
+}
+
+header {
+  background: #007BFF; /* Azul forte */
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 800px; /* Largura máxima */
+  margin: 20px auto; /* Centraliza o container */
+  background: white; /* Fundo branco */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 8px; /* Cantos arredondados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+h2 {
+  color: #007BFF; /* Azul forte para os títulos */
+  margin-top: 20px;
+}
+
+ul {
+  margin: 15px 0;
+  padding-left: 20px; /* Alinhamento da lista */
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #007BFF; /* Azul forte */
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Fonte mais moderna */
+  line-height: 1.8; /* Maior espaçamento entre linhas */
+  color: #333; /* Cor do texto */
+  background-color: #f9f9f9; /* Fundo suave */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o rodapé esteja sempre na parte inferior */
+}
+
+header {
+  background: linear-gradient(90deg, #0056b3, #007bff); /* Gradiente azul */
+  color: #fff; /* Texto branco */
+  padding: 20px 0; /* Padding ampliado */
+  text-align: center;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+header h1 {
+  font-size: 2.5em; /* Tamanho maior do título */
+  font-weight: 700; /* Negrito */
+  letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+nav ul {
+  list-style: none; /* Remove os marcadores da lista */
+  display: flex;
+  justify-content: center; /* Centraliza a navegação */
+  margin-top: 10px; /* Margem superior */
+}
+
+nav ul li {
+  margin: 0 20px; /* Espaçamento lateral */
+}
+
+nav ul li a {
+  color: #fff; /* Texto branco */
+  text-decoration: none; /* Remove sublinhado */
+  font-weight: bold;
+  padding: 10px 15px; /* Espaçamento interno nos links */
+  border-radius: 5px; /* Cantos arredondados */
+  transition: background-color 0.3s; /* Transição suave */
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Efeito ao passar o mouse */
+}
+
+main {
+  flex: 1; /* Expande para ocupar espaço restante */
+  padding: 2em 1em; /* Padding interno */
+  max-width: 1200px; /* Largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+.container {
+  background: #fff; /* Fundo branco */
+  padding: 30px; /* Padding interno */
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-bottom: 2em; /* Espaço entre seções */
+}
+
+h2 {
+  color: #0056b3; /* Azul forte para os títulos */
+  font-size: 2em; /* Tamanho do título */
+  margin-bottom: 0.5em; /* Margem inferior */
+  border-bottom: 2px solid #007bff; /* Linha embaixo do título */
+  padding-bottom: 10px; /* Padding inferior */
+}
+
+ul {
+  margin: 15px 0; /* Margens da lista */
+  padding-left: 20px; /* Alinhamento da lista */
+}
+
+footer {
+  text-align: center; /* Centraliza o texto */
+  padding: 20px; /* Padding interno */
+  background: #0056b3; /* Azul forte */
+  color: white; /* Texto branco */
+  font-size: 1em; /* Tamanho do texto */
+}
+
+footer p {
+  margin: 5px 0; /* Margens do texto do rodapé */
+}
+
+/* Estilos adicionais para elementos de chamada à ação (CTA) */
+.cta {
+  background-color: #007bff; /* Azul do botão */
+  color: white; /* Texto branco */
+  padding: 20px; /* Padding interno */
+  border-radius: 5px; /* Cantos arredondados */
+  margin-top: 2em; /* Margem superior */
+}
+
+.cta .button {
+  display: inline-block; /* Para botão ser um bloco */
+  padding: 10px 20px; /* Padding do botão */
+  background-color: white; /* Fundo branco */
+  color: #007bff; /* Texto azul */
+  border-radius: 5px; /* Cantos arredondados */
+  text-decoration: none; /* Remove sublinhado */
+  font-weight: bold; /* Negrito */
+  transition: background-color 0.3s, color 0.3s; /* Transições suaves */
+}
+
+.cta .button:hover {
+  background-color: #0056b3; /* Azul mais escuro no hover */
+  color: white; /* Texto branco no hover */
+}
+
+/* Galeria de imagens */
+.galeria {
+  margin-top: 2em; /* Margem superior */
+}
+
+.galeria h2 {
+  text-align: center; /* Centraliza o título */
+}
+
+.galeria .imagens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas responsivas */
+  gap: 20px; /* Espaçamento entre as imagens */
+}
+
+.galeria img {
+  width: 100%; /* Largura total do contêiner */
+  height: auto; /* Altura automática */
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease; /* Transição suave no hover */
+}
+
+.galeria img:hover {
+  transform: scale(1.05); /* Efeito de aumento no hover */
+}
+
