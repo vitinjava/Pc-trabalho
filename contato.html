@@ -1,142 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Início - Laranjeiras do Sul</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #1e1e2f, #24243e);
-      color: #f2f2f2;
-    }
-
-    header {
-      text-align: center;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border-bottom: 2px solid #76e4e4;
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      color: #76e4e4;
-      margin-bottom: 10px;
-    }
-
-    nav a {
-      color: #76e4e4;
-      text-decoration: none;
-      padding: 0 15px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #f4b400;
-      transform: scale(1.05);
-    }
-
-    .button-info {
-      padding: 12px 24px;
-      background-color: #f4b400;
-      color: #1e1e2f;
-      text-transform: uppercase;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      border-radius: 30px;
-      font-size: 1em;
-      transition: background-color 0.3s, transform 0.2s;
-    }
-
-    .button-info:hover {
-      background-color: #76e4e4;
-      transform: scale(1.05);
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: rgba(0, 0, 0, 0.2);
-      color: #f2f2f2;
-      margin-top: 30px;
-      font-size: 0.9em;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Falta de Sinalização</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Bem-vindo a Laranjeiras do Sul</h1>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="contato.html">Contato</a>
-    </nav>
-  </header>
+    <header>
+        <h1>Contato</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="informacao.html">Consequências</a></li>
+                <li><a href="Contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section style="text-align: center; margin-top: 40px;">
-      <p>Este site foi criado para informar sobre a falta de sinalização nas ruas de Laranjeiras do Sul.</p>
-      <p>Para saber mais sobre como entrar em contato conosco e conferir nossa cobertura na imprensa, clique no botão abaixo:</p>
+    <main>
+        <section class="contato">
+            <h2>Entre em contato</h2>
+            <p>Se você deseja compartilhar uma experiência ou saber mais sobre o nosso trabalho, entre em contato.</p>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
 
-      <!-- Botão para abrir uma nova aba com informações de contato -->
-      <button class="button-info" onclick="openInfoPage()">Forma de Contato</button>
-    </section>
-  </main>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-  <footer>
-    <p>&copy; 2024 - Laranjeiras do Sul</p>
-  </footer>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
 
-  <script>
-    // Função para abrir uma nova aba com as informações de contato
-    function openInfoPage() {
-      const infoContent = `
-        <!DOCTYPE html>
-        <html lang="pt-br">
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Informações de Contato</title>
-          <style>
-            body { font-family: Arial, sans-serif; background: #1e1e2f; color: #f2f2f2; padding: 20px; }
-            h1 { color: #76e4e4; }
-            a { color: #f4b400; text-decoration: none; }
-            a:hover { color: #76e4e4; }
-            blockquote { margin-top: 20px; padding: 15px; background-color: rgba(255, 255, 255, 0.08); border-left: 5px solid #76e4e4; font-style: italic; }
-          </style>
-        </head>
-        <body>
-          <h1>Forma de Contato</h1>
-          <ul>
-            <li><strong>Telefone:</strong> (99) 1234-5678</li>
-            <li><strong>Facebook:</strong> <a href="#">facebook.com/laranjeirasdosul-futuro</a></li>
-            <li><strong>Instagram:</strong> <a href="#">@laranjeiras_futuro</a></li>
-            <li><strong>Twitter:</strong> <a href="#">@laranjes_futuro</a></li>
-          </ul>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
 
-          <h2>Informações sobre o site</h2>
-          <p>Este site foi criado para alertar sobre a falta de sinalização em Laranjeiras do Sul, buscando chamar a atenção das autoridades e da população sobre os riscos e a necessidade de melhorias na infraestrutura viária da cidade.</p>
+        <section class="redes-sociais">
+            <h2>Nos siga nas redes sociais</h2>
+            <p>Conecte-se conosco através das redes sociais para saber mais sobre o nosso trabalho.</p>
+            <div class="icones">
+                <a href="https://www.instagram.com/seuPerfil" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.twitter.com/seuPerfil" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="https://wa.me/seuNumero" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </section>
+    </main>
 
-          <h2>Objetivo do site</h2>
-          <p>O objetivo é fornecer uma plataforma onde os cidadãos possam se informar sobre a situação da sinalização urbana, além de incentivar a participação na melhoria do tráfego e da segurança viária de Laranjeiras do Sul.</p>
-
-          <h2>Reportagem em destaque</h2>
-          <blockquote>
-            <p>"Laranjeiras do Sul: Sinalização no Futuro é uma iniciativa que está ganhando visibilidade em toda a cidade. Com um site interativo e informativo, o projeto vem alertando sobre a falta de sinalização e os riscos para a segurança urbana."</p>
-            <p>- Jornal Folha do Paraná</p>
-          </blockquote>
-        </body>
-        </html>
-      `;
-
-      const newWindow = window.open();
-      newWindow.document.write(infoContent);
-      newWindow.document.close();
-    }
-  </script>
+    <footer>
+        <p>&copy; 2024 Falta de Sinalização. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
